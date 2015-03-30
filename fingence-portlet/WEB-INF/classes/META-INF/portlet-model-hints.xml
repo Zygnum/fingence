@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.fingence.slayer.model.Asset">
+		<field name="assetId" type="long" />
+		<field name="security_ticker" type="String" />
+		<field name="id_cusip" type="String" />
+		<field name="id_isin" type="String" />
+		<field name="id_bb_global" type="String" />
+		<field name="id_bb_sec_num_src" type="long" />
+		<field name="name" type="String" />
+		<field name="chg_pct_mtd" type="double" />
+		<field name="chg_pct_5d" type="double" />
+		<field name="chg_pct_1m" type="double" />
+		<field name="chg_pct_3m" type="double" />
+		<field name="chg_pct_6m" type="double" />
+		<field name="chg_pct_ytd" type="double" />
+		<field name="chg_pct_high_52week" type="double" />
+		<field name="chg_pct_low_52week" type="double" />
+		<field name="chg_pct_1yr" type="double" />
+		<field name="chg_trr_5yr" type="double" />
+		<field name="current_price" type="double" />
+		<field name="last_price" type="double" />
+		<field name="bid_price" type="double" />
+		<field name="ask_price" type="double" />
+		<field name="security_des" type="String" />
+		<field name="parent_comp_name" type="String" />
+		<field name="security_class" type="int" />
+		<field name="volatility_30d" type="double" />
+		<field name="volatility_90d" type="double" />
+		<field name="volatility_180d" type="double" />
+		<field name="volatility_360d" type="double" />
+		<field name="currency" type="String" />
+		<field name="country" type="long" />
+		<field name="country_of_risk" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.Bond">
+		<field name="assetId" type="long" />
+		<field name="issuer_bulk" type="String" />
+		<field name="cpn" type="double" />
+		<field name="cpn_typ" type="String" />
+		<field name="mty_typ" type="String" />
+		<field name="mty_years_tdy" type="double" />
+		<field name="yld_ytm_ask" type="double" />
+		<field name="yld_ytm_bid" type="double" />
+		<field name="yld_cur_mid" type="double" />
+		<field name="issue_dt" type="Date" />
+		<field name="maturity_dt" type="Date" />
+		<field name="calc_typ" type="double" />
+		<field name="is_bond_no_calctyp" type="boolean" />
+		<field name="collat_typ" type="String" />
+		<field name="bb_composite" type="String" />
+		<field name="rtg_sp" type="String" />
+		<field name="rtg_moody" type="String" />
+		<field name="rtg_fitch" type="String" />
+		<field name="cpn_freq" type="double" />
+		<field name="five_y_bid_cds_spread" type="double" />
+		<field name="dur_mid" type="double" />
+		<field name="price_to_cash_flow" type="double" />
+		<field name="amount_issued" type="double" />
+		<field name="amount_outstanding" type="double" />
+	</model>
+	<model name="com.fingence.slayer.model.Currency">
+		<field name="currencyId" type="long" />
+		<field name="currencyCode" type="String" />
+		<field name="currencyDesc" type="String" />
+		<field name="conversion" type="double" />
+		<field name="currencySymbol" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.Dividend">
+		<field name="recId" type="long" />
+		<field name="assetId" type="long" />
+		<field name="declaredDate" type="Date" />
+		<field name="exDate" type="Date" />
+		<field name="recordDate" type="Date" />
+		<field name="payableDate" type="Date" />
+		<field name="amount" type="double" />
+		<field name="frequency" type="String" />
+		<field name="type" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.Equity">
+		<field name="assetId" type="long" />
+		<field name="eqy_alpha" type="double" />
+		<field name="dividend_yield" type="double" />
+		<field name="eqy_dvd_yld_12m" type="double" />
+		<field name="eqy_dvd_yld_es" type="double" />
+		<field name="dvd_payout_ratio" type="double" />
+		<field name="pe_ratio" type="double" />
+		<field name="tot_debt_to_com_eqy" type="double" />
+		<field name="ebitda_to_revenue" type="double" />
+		<field name="trail_12m_prof_margin" type="double" />
+		<field name="best_current_ev_best_opp" type="double" />
+		<field name="eqy_beta" type="double" />
+		<field name="return_sharpe_ratio" type="double" />
+		<field name="eqy_sharpe_ratio_1yr" type="double" />
+		<field name="eqy_sharpe_ratio_3yr" type="double" />
+		<field name="eqy_sharpe_ratio_5yr" type="double" />
+	</model>
+	<model name="com.fingence.slayer.model.History">
+		<field name="recId" type="long" />
+		<field name="assetId" type="long" />
+		<field name="logDate" type="Date" />
+		<field name="value" type="double" />
+		<field name="type" type="int" />
+		<field name="principal" type="double" />
+	</model>
+	<model name="com.fingence.slayer.model.MutualFund">
+		<field name="assetId" type="long" />
+		<field name="fund_total_assets" type="double" />
+		<field name="fund_asset_class_focus" type="String" />
+		<field name="fund_geo_focus" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.MyResult">
+		<field name="itemId" type="long" />
+		<field name="portfolioId" type="long" />
+		<field name="institution" type="String" />
+		<field name="assetId" type="long" />
+		<field name="security_ticker" type="String" />
+		<field name="id_isin" type="String" />
+		<field name="name" type="String" />
+		<field name="industry_sector" type="String" />
+		<field name="purchaseQty" type="double" />
+		<field name="purchaseDate" type="Date" />
+		<field name="current_price" type="double" />
+		<field name="purchasedFx" type="double" />
+		<field name="current_fx" type="double" />
+		<field name="baseCurrency" type="String" />
+		<field name="security_des" type="String" />
+		<field name="security_class_int" type="int" />
+		<field name="security_class" type="String" />
+		<field name="security_typ" type="String" />
+		<field name="security_typ2" type="String" />
+		<field name="asset_class" type="String" />
+		<field name="asset_sub_class" type="String" />
+		<field name="parent_comp_name" type="String" />
+		<field name="countryId" type="long" />
+		<field name="countryName" type="String" />
+		<field name="countryOfRisk" type="long" />
+		<field name="countryOfRiskName" type="String" />
+		<field name="currency_" type="String" />
+		<field name="currencyDesc" type="String" />
+		<field name="purchasedMarketValue" type="double" />
+		<field name="currentMarketValue" type="double" />
+		<field name="gain_loss" type="double" />
+		<field name="gain_loss_percent" type="double" />
+		<field name="fx_gain_loss" type="double" />
+		<field name="income" type="double" />
+		<field name="currencySymbol" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.Portfolio">
+		<field name="portfolioId" type="long" />
+		<field name="portfolioName" type="String" />
+		<field name="investorId" type="long" />
+		<field name="wealthAdvisorId" type="long" />
+		<field name="relationshipManagerId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="trial" type="boolean" />
+		<field name="primary" type="boolean" />
+		<field name="social" type="boolean" />
+		<field name="baseCurrency" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.PortfolioItem">
+		<field name="itemId" type="long" />
+		<field name="assetId" type="long" />
+		<field name="portfolioId" type="long" />
+		<field name="purchaseDate" type="Date" />
+		<field name="purchasePrice" type="double" />
+		<field name="purchaseQty" type="double" />
+		<field name="purchasedFx" type="double" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.fingence.slayer.model.Rating">
+		<field name="ratingId" type="long" />
+		<field name="moodys" type="String" />
+		<field name="sandp" type="String" />
+		<field name="fitch" type="String" />
+		<field name="general" type="String" />
+		<field name="description" type="String" />
+		<field name="creditWorthiness" type="String" />
+		<field name="category" type="String" />
+	</model>
+	<model name="com.fingence.slayer.model.ReportConfig">
+		<field name="recId" type="long" />
+		<field name="reportId" type="long" />
+		<field name="enabled" type="boolean" />
+		<field name="classPK" type="long" />
+		<field name="classNameId" type="long" />
+	</model>
+</model-hints>
